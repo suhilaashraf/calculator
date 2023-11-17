@@ -13,10 +13,21 @@ float sum(float num1 , float num2);
 int main() {
 
 	float input1,input2,result=0.0;
+	int num1,num2;
 	int op;
-	scanf("%f %f",&input1,&input2);
+	printf("choose the operation:\n1)sum \n2)sub \n3)multiply \n4)divide \n5)modulus");
 	scanf("%d",&op);
-
+	if(op==5){
+	   scanf("%f %f",&num1,&num2);
+	}
+	else if(op<5)
+	{
+           scanf("%f %f",&input1,&input2);
+	}
+	else{
+		printf("invalid input");
+	}
+	
 	switch(op){
 	case 1:
 		result =sum(input1,input2);
@@ -34,7 +45,7 @@ int main() {
 		break;
 
 	case 5:
-		result = modulo(input1,input2);
+		result = modulo(num1,num2);
 		break;
 
 	default:

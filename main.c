@@ -50,6 +50,7 @@ int main() {
 
 	default:
 		printf("invalid input");
+		break;
 	}
 
 	printf("%f",result);
